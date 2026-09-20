@@ -1,6 +1,0 @@
-name := "keepassxc"
-packages := "keepassxc"
-
-import '../sysext.just'
-
-all: default

@@ -1,9 +1,0 @@
-name := "btop"
-packages := "
-btop
-rocm-smi
-"
-
-import '../sysext.just'
-
-all: default

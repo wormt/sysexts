@@ -1,6 +1,0 @@
-name := "git-email"
-packages := "git-email msmtp"
-
-import '../sysext.just'
-
-all: default

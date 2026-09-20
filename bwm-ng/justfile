@@ -1,6 +1,0 @@
-name := "bwm-ng"
-packages := "bwm-ng"
-
-import '../sysext.just'
-
-all: default

@@ -1,6 +1,0 @@
-name := "tree"
-packages := "tree"
-
-import '../sysext.just'
-
-all: default

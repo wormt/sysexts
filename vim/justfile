@@ -1,6 +1,0 @@
-name := "vim"
-packages := "vim"
-
-import '../sysext.just'
-
-all: default

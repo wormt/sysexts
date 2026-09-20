@@ -1,6 +1,0 @@
-name := "kitty"
-packages := "kitty"
-
-import '../sysext.just'
-
-all: default

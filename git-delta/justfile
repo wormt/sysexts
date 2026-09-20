@@ -1,6 +1,0 @@
-name := "git-delta"
-packages := "git-delta"
-
-import '../sysext.just'
-
-all: default

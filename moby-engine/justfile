@@ -1,9 +1,0 @@
-name := "moby-engine"
-packages := "moby-engine"
-upholds := "
-docker.socket
-"
-
-import '../sysext.just'
-
-all: default

@@ -1,6 +1,0 @@
-name := "git-absorb"
-packages := "git-absorb"
-
-import '../sysext.just'
-
-all: default

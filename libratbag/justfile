@@ -1,7 +1,0 @@
-name := "libratbag"
-packages := "libratbag-ratbagd"
-upholds := "ratbagd.service"
-
-import '../sysext.just'
-
-all: default

@@ -1,6 +1,0 @@
-name := "zsh"
-packages := "zsh"
-
-import '../sysext.just'
-
-all: default

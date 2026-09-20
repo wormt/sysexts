@@ -1,6 +1,0 @@
-name := "krb5-workstation"
-packages := "krb5-workstation"
-
-import '../sysext.just'
-
-all: default

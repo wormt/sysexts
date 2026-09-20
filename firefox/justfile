@@ -1,9 +1,0 @@
-name := "firefox"
-packages := "
-firefox
-firefox-langpacks
-"
-
-import '../sysext.just'
-
-all: default

@@ -1,6 +1,0 @@
-name := "steam-devices"
-packages := "steam-devices"
-
-import '../sysext.just'
-
-all: default

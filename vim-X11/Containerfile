@@ -1,7 +1,0 @@
-FROM baseimage
-
-RUN <<EORUN
-set -xeuo pipefail
-dnf install -y vim-X11
-dnf clean all
-EORUN

@@ -1,6 +1,0 @@
-name := "distrobox"
-packages := "distrobox"
-
-import '../sysext.just'
-
-all: default

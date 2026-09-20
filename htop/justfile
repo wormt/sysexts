@@ -1,6 +1,0 @@
-name := "htop"
-packages := "htop"
-
-import '../sysext.just'
-
-all: default

@@ -1,6 +1,0 @@
-name := "just"
-packages := "just"
-
-import '../sysext.just'
-
-all: default

@@ -1,6 +1,0 @@
-name := "nebula"
-packages := "nebula"
-
-import '../sysext.just'
-
-all: default

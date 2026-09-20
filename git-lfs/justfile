@@ -1,6 +1,0 @@
-name := "git-lfs"
-packages := "git-lfs"
-
-import '../sysext.just'
-
-all: default

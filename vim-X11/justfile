@@ -1,6 +1,0 @@
-name := "vim-X11"
-packages := "vim-X11"
-
-import '../sysext.just'
-
-all: default

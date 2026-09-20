@@ -1,6 +1,0 @@
-name := "fastfetch"
-packages := "fastfetch"
-
-import '../sysext.just'
-
-all: default

@@ -1,6 +1,0 @@
-name := "helix"
-packages := "helix"
-
-import '../sysext.just'
-
-all: default

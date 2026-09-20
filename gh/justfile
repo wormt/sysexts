@@ -1,6 +1,0 @@
-name := "gh"
-packages := "gh"
-
-import '../sysext.just'
-
-all: default

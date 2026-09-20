@@ -1,7 +1,0 @@
-name := "inxi"
-packages := "inxi"
-cleanup_files := "/var/lib/freeipmi/ipckey"
-
-import '../sysext.just'
-
-all: default

@@ -1,6 +1,0 @@
-name := "strace"
-packages := "strace"
-
-import '../sysext.just'
-
-all: default

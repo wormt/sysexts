@@ -1,6 +1,0 @@
-name := "source-foundry-hack-fonts"
-packages := "source-foundry-hack-fonts"
-
-import '../sysext.just'
-
-all: default

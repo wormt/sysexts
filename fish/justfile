@@ -1,6 +1,0 @@
-name := "fish"
-packages := "fish"
-
-import '../sysext.just'
-
-all: default

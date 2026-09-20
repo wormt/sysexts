@@ -1,9 +1,0 @@
-name := "adobe-source-code-pro-fonts"
-packages := "
-adobe-source-code-pro-fonts
-adobe-source-code-vf-fonts
-"
-
-import '../sysext.just'
-
-all: default

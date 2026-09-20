@@ -1,6 +1,0 @@
-name := "fd-find"
-packages := "fd-find"
-
-import '../sysext.just'
-
-all: default

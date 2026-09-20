@@ -1,6 +1,0 @@
-name := "iotop"
-packages := "iotop"
-
-import '../sysext.just'
-
-all: default
