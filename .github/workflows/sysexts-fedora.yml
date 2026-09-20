@@ -254,6 +254,12 @@ jobs:
           sysext: 'libratbag'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: libvirt-devel"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'libvirt-devel'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: libvirtd-desktop"
         uses: ./.github/actions/build
         with:
@@ -591,6 +597,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'libratbag'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: libvirt-devel"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'libvirt-devel'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirtd-desktop"
@@ -1298,6 +1310,12 @@ jobs:
           sysext: 'libratbag'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: libvirt-devel"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'libvirt-devel'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: libvirtd-desktop"
         uses: ./.github/actions/build
         with:
@@ -1635,6 +1653,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'libratbag'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: libvirt-devel"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'libvirt-devel'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirtd-desktop"

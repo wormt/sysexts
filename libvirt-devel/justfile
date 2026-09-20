@@ -1,0 +1,6 @@
+name := "libvirt-devel"
+packages := "libvirt-devel"
+
+import '../sysext.just'
+
+all: default
