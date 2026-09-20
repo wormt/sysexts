@@ -1,0 +1,6 @@
+name := "tailscale"
+packages := "tailscale"
+
+import '../sysext.just'
+
+all: default

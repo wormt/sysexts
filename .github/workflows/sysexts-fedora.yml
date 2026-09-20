@@ -368,6 +368,12 @@ jobs:
           sysext: 'syncthing'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: tailscale"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'tailscale'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: tmux"
         uses: ./.github/actions/build
         with:
@@ -735,6 +741,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'syncthing'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: tailscale"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'tailscale'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: tmux"
@@ -1472,6 +1484,12 @@ jobs:
           sysext: 'syncthing'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: tailscale"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'tailscale'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: tmux"
         uses: ./.github/actions/build
         with:
@@ -1839,6 +1857,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'syncthing'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: tailscale"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'tailscale'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: tmux"
