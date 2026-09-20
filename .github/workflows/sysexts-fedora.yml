@@ -386,6 +386,12 @@ jobs:
           sysext: 'tree'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: vim-X11"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'vim-X11'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: vim"
         uses: ./.github/actions/build
         with:
@@ -759,6 +765,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'tree'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: vim-X11"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'vim-X11'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: vim"
@@ -1502,6 +1514,12 @@ jobs:
           sysext: 'tree'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: vim-X11"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'vim-X11'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: vim"
         uses: ./.github/actions/build
         with:
@@ -1875,6 +1893,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'tree'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: vim-X11"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'vim-X11'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: vim"
