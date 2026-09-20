@@ -320,6 +320,12 @@ jobs:
           sysext: 'qutebrowser'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: rclone"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'rclone'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -681,6 +687,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'qutebrowser'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: rclone"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'rclone'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: ripgrep"
@@ -1412,6 +1424,12 @@ jobs:
           sysext: 'qutebrowser'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: rclone"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'rclone'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: ripgrep"
         uses: ./.github/actions/build
         with:
@@ -1773,6 +1791,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'qutebrowser'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: rclone"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'rclone'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: ripgrep"

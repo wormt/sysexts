@@ -1,0 +1,6 @@
+name := "rclone"
+packages := "rclone"
+
+import '../sysext.just'
+
+all: default
