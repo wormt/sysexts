@@ -302,6 +302,12 @@ jobs:
           sysext: 'powertop'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: qemu-user-static"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'qemu-user-static'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: qemu"
         uses: ./.github/actions/build
         with:
@@ -657,6 +663,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'powertop'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: qemu-user-static"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'qemu-user-static'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qemu"
@@ -1382,6 +1394,12 @@ jobs:
           sysext: 'powertop'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: qemu-user-static"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'qemu-user-static'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: qemu"
         uses: ./.github/actions/build
         with:
@@ -1737,6 +1755,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'powertop'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: qemu-user-static"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'qemu-user-static'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qemu"

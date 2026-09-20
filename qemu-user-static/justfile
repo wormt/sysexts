@@ -1,0 +1,7 @@
+name := "qemu-user-static"
+packages := "qemu-user-static"
+version_package := "qemu-user-static"
+
+import '../sysext.just'
+
+all: default
