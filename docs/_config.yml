@@ -1,10 +1,10 @@
 # SPDX-FileCopyrightText: Timothée Ravier <tim@siosm.fr>
 # SPDX-License-Identifier: CC0-1.0
 
-title: "extensions.fcos.fr (Fedora)"
-description: "Fedora RPM based sysexts for Fedora"
-baseurl: "/fedora"
-url: "https://fedora-sysexts.github.io"
+title: "wormt.github.io (sysexts)"
+description: "Sysexts for Wormt"
+baseurl: "/sysexts"
+url: "https://wormt.github.io"
 permalink: "/:title/"
 markdown: "kramdown"
 kramdown:
@@ -18,15 +18,15 @@ plugins:
 
 # Exclude from processing.
 exclude:
-   - justfile
-   - Gemfile
-   - Gemfile.lock
-   - vendor
+  - justfile
+  - Gemfile
+  - Gemfile.lock
+  - vendor
 
 # Aux links for the upper right navigation
 aux_links:
   "Sources on GitHub":
-    - "https://github.com/fedora-sysexts/fedora"
+    - "https://github.com/wormt/sysexts"
 
 # Footer last edited timestamp
 last_edit_timestamp: true
