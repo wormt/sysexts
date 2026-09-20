@@ -1,0 +1,6 @@
+name := "mpd"
+packages := "mpd"
+
+import '../sysext.just'
+
+all: default

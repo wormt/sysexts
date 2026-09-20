@@ -278,6 +278,12 @@ jobs:
           sysext: 'mosh'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: mpd"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'mpd'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: nebula"
         uses: ./.github/actions/build
         with:
@@ -621,6 +627,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'mosh'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: mpd"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'mpd'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: nebula"
@@ -1334,6 +1346,12 @@ jobs:
           sysext: 'mosh'
           image: ${{ env.IMAGE }}
 
+      - name: "Build sysext: mpd"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'mpd'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: nebula"
         uses: ./.github/actions/build
         with:
@@ -1677,6 +1695,12 @@ jobs:
         uses: ./.github/actions/build
         with:
           sysext: 'mosh'
+          image: ${{ env.IMAGE }}
+
+      - name: "Build sysext: mpd"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'mpd'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: nebula"
