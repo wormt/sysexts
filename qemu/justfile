@@ -1,0 +1,7 @@
+name := "qemu"
+packages := "qemu"
+version_package := "qemu"
+
+import '../sysext.just'
+
+all: default
