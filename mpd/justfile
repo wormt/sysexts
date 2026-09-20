@@ -1,5 +1,6 @@
 name := "mpd"
 packages := "mpd"
+cleanup_files := "/var/lib/adplug/adplug.db"
 
 import '../sysext.just'
 
