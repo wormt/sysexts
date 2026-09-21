@@ -85,6 +85,7 @@ runs:
 
         rm -f ./SHA256SUMS* ./*.conf ./*.raw
 
+        sleep 120
         for sysext in $(./.github/list_sysexts.sh); do
             curl --location --fail --output "SHA256SUMS.${sysext}" "${RELEASEURL}/${sysext}/SHA256SUMS"
         done
