@@ -22,7 +22,7 @@ runs:
         gh release list --limit 2000 --json tagName > releases.json
 
         for sysext in $(./.github/list_sysexts.sh); do
-          rm -f ./SHA256SUMS* ./*.conf
+          rm -f ./SHA256SUMS* ./*.conf ./*.raw
 
           releases=(
             $(
@@ -44,6 +44,7 @@ runs:
           for rel in ${releases[@]}; do
             echo "Fetching SHA256SUMS for release: ${rel}"
             curl --location --fail --output "SHA256SUMS.${rel}" "${RELEASEURL}/${rel}/SHA256SUMS" || touch "SHA256SUMS.${rel}"
+            curl --location --fail --output "${rel}.raw" "${RELEASEURL}/${rel}/${rel}.raw" || rm "SHA256SUMS.${rel}"
           done
           ls ./SHA256SUMS.* | sort -h | xargs cat > SHA256SUMS
           new="$(cat SHA256SUMS | sha256sum)"
@@ -78,14 +79,14 @@ runs:
               --notes-file notes \
               "${sysext}" \
               --latest=false \
-              ./SHA256SUMS ./${sysext}.conf
+              ./SHA256SUMS ./${sysext}.conf ./*.raw
           fi
         done
 
-        rm -f ./SHA256SUMS* ./*.conf
+        rm -f ./SHA256SUMS* ./*.conf ./*.raw
 
         for sysext in $(./.github/list_sysexts.sh); do
-            curl --location --fail --output "SHA256SUMS.${sysext}" "${RELEASEURL}/${sysext}/SHA256SUMS" || touch "SHA256SUMS.${sysext}"
+            curl --location --fail --output "SHA256SUMS.${sysext}" "${RELEASEURL}/${sysext}/SHA256SUMS"
         done
         ls ./SHA256SUMS.* | sort -h | xargs cat > SHA256SUMS
 
