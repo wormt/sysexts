@@ -4,12 +4,7 @@ version_package := "ivpn"
 files := "usr"
 upholds := "ivpn-service.service"
 
-pre_commands := """
-	rpm --import https://repo.ivpn.net/stable/fedora/generic/repo.gpg \
-		&& echo assumeyes=True >> /etc/dnf/dnf.conf \
-		&& dnf config-manager addrepo \
-			--from-repofile=https://repo.ivpn.net/stable/fedora/generic/ivpn.repo
-"""
+pre_commands := "rpm --import https://repo.ivpn.net/stable/fedora/generic/repo.gpg && echo assumeyes=True >> /etc/dnf/dnf.conf && dnf config-manager addrepo --from-repofile=https://repo.ivpn.net/stable/fedora/generic/ivpn.repo"
 
 import '../sysext.just'
 
