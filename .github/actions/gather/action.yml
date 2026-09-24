@@ -46,7 +46,12 @@ runs:
             curl --location --fail --output "SHA256SUMS.${rel}" "${RELEASEURL}/${rel}/SHA256SUMS" || touch "SHA256SUMS.${rel}"
             curl --location --fail --output "${rel}.raw" "${RELEASEURL}/${rel}/${rel}.raw" || rm "SHA256SUMS.${rel}"
           done
-          ls ./SHA256SUMS.* | sort -h | xargs cat > SHA256SUMS
+          if compgen -G "./SHA256SUMS.*" > /dev/null; then
+            ls ./SHA256SUMS.* | sort -h | xargs cat > SHA256SUMS
+          else
+            echo "No releases found for ${sysext}"
+            touch SHA256SUMS
+          fi
           new="$(cat SHA256SUMS | sha256sum)"
 
           old=""

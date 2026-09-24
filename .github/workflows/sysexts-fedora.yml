@@ -15,11 +15,11 @@ on:
     branches:
       - "main"
   schedule:
-    - cron: "0 0 * * *"
+    - cron:  '0 0 * * *'
   workflow_dispatch:
     inputs:
       force-rebuild:
-        description: "Force rebuild of all sysexts"
+        description: 'Force rebuild of all sysexts'
         required: true
         default: false
         type: boolean
@@ -59,37 +59,37 @@ jobs:
       - name: "Build sysext: ivpn"
         uses: ./.github/actions/build
         with:
-          sysext: "ivpn"
+          sysext: 'ivpn'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirt-devel"
         uses: ./.github/actions/build
         with:
-          sysext: "libvirt-devel"
+          sysext: 'libvirt-devel'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: mpd"
         uses: ./.github/actions/build
         with:
-          sysext: "mpd"
+          sysext: 'mpd'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qemu-user-static"
         uses: ./.github/actions/build
         with:
-          sysext: "qemu-user-static"
+          sysext: 'qemu-user-static'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qemu"
         uses: ./.github/actions/build
         with:
-          sysext: "qemu"
+          sysext: 'qemu'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: rclone"
         uses: ./.github/actions/build
         with:
-          sysext: "rclone"
+          sysext: 'rclone'
           image: ${{ env.IMAGE }}
 
   build-fedora-silverblue-44-x86_64:
@@ -200,37 +200,37 @@ jobs:
       - name: "Build sysext: ivpn"
         uses: ./.github/actions/build
         with:
-          sysext: "ivpn"
+          sysext: 'ivpn'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirt-devel"
         uses: ./.github/actions/build
         with:
-          sysext: "libvirt-devel"
+          sysext: 'libvirt-devel'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: mpd"
         uses: ./.github/actions/build
         with:
-          sysext: "mpd"
+          sysext: 'mpd'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qemu-user-static"
         uses: ./.github/actions/build
         with:
-          sysext: "qemu-user-static"
+          sysext: 'qemu-user-static'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qemu"
         uses: ./.github/actions/build
         with:
-          sysext: "qemu"
+          sysext: 'qemu'
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: rclone"
         uses: ./.github/actions/build
         with:
-          sysext: "rclone"
+          sysext: 'rclone'
           image: ${{ env.IMAGE }}
 
   build-fedora-silverblue-44-aarch64:
