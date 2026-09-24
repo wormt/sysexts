@@ -1,0 +1,41 @@
+name := "ivpn"
+packages := "ivpn"
+version_package := "ivpn"
+files := "usr"
+upholds := "ivpn-service.service"
+
+pre_commands := """
+	rpm --import https://repo.ivpn.net/stable/fedora/generic/repo.gpg \
+		&& echo assumeyes=True >> /etc/dnf/dnf.conf \
+		&& dnf config-manager addrepo \
+			--from-repofile=https://repo.ivpn.net/stable/fedora/generic/ivpn.repo
+"""
+
+import '../sysext.just'
+
+all: default
+
+install-manual:
+	#!/bin/bash
+	set -euo pipefail
+	if [[ -n "{{debug}}" ]]; then
+		set -x
+	fi
+
+	if [[ "${UID}" == "0" ]]; then
+		SUDO=""
+	else
+		SUDO="sudo"
+	fi
+
+	cd rootfs
+
+	${SUDO} mv opt/ivpn usr/lib/ivpn
+	${SUDO} rmdir opt
+
+	${SUDO} install -Dm 0644 \
+		usr/share/pleaserun/ivpn-service/systemd/default/files/etc/systemd/system/ivpn-service.service \
+		usr/lib/systemd/system/ivpn-service.service
+
+	${SUDO} install -Dm 0644 usr/lib/ivpn/etc/ivpn.bash-completion \
+		usr/share/bash-completion/completions/ivpn
