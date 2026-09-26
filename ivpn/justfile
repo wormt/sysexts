@@ -34,3 +34,9 @@ install-manual:
 
 	${SUDO} install -Dm 0644 usr/lib/ivpn/etc/ivpn.bash-completion \
 		usr/share/bash-completion/completions/ivpn
+
+	${SUDO} chmod 0755 usr/lib/ivpn/etc/firewall.sh usr/lib/ivpn/etc/splittun.sh \
+		usr/lib/ivpn/etc/client.up usr/lib/ivpn/etc/client.down
+	${SUDO} chmod 0600 usr/lib/ivpn/etc/ca.crt usr/lib/ivpn/etc/ta.key \
+		usr/lib/ivpn/etc/servers.json usr/lib/ivpn/etc/dnscrypt-proxy-template.toml
+	${SUDO} chmod 0644 usr/lib/ivpn/etc/ivpn.bash-completion
