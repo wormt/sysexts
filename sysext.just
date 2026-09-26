@@ -415,6 +415,10 @@ inputs target arch=arch:
     cd ..
     sha256sum sysext.just >> ./{{name}}/scripts
 
+    # check if we need to rebuild
+    sha256sum {{name}}/justfile >> ./{{name}}/inputs
+    sha256sum sysext.just >> ./{{name}}/inputs
+
 # Sets up the rootfs directory and creates the extension release config
 setup-rootfs target arch=arch:
     #!/bin/bash
