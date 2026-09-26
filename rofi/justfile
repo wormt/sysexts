@@ -1,0 +1,6 @@
+name := "rofi"
+packages := "rofi"
+
+import '../sysext.just'
+
+all: default
