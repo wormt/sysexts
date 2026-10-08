@@ -3,13 +3,11 @@ packages := "ivpn"
 version_package := "ivpn"
 files := "usr"
 upholds := "ivpn-service.service"
+external_repos := "https://repo.ivpn.net/stable/fedora/generic/ivpn.repo"
 
 pre_commands := '''
 	rpm --import https://repo.ivpn.net/stable/fedora/generic/repo.gpg &&
-	dnf config-manager setopt ivpn.assumeyes=1 &&
-	dnf config-manager addrepo \
-		--from-repofile=https://repo.ivpn.net/stable/fedora/generic/ivpn.repo" &&
-	dnf config-manager setopt ivpn.assumeyes=0
+	dnf config-manager setopt ivpn.assumeyes=1
 '''
 
 import '../sysext.just'
@@ -22,6 +20,8 @@ install-manual:
 	if [[ -n "{{debug}}" ]]; then
 		set -x
 	fi
+
+	dnf config-manager setopt ivpn.assumeyes=0
 
 	if [[ "${UID}" == "0" ]]; then
 		SUDO=""
