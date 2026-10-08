@@ -5,10 +5,7 @@ files := "usr"
 upholds := "ivpn-service.service"
 external_repos := "https://repo.ivpn.net/stable/fedora/generic/ivpn.repo"
 
-pre_commands := '''
-	rpm --import https://repo.ivpn.net/stable/fedora/generic/repo.gpg &&
-	dnf config-manager setopt main.assumeyes=1
-'''
+pre_commands := "rpm --import https://repo.ivpn.net/stable/fedora/generic/repo.gpg && dnf config-manager setopt assumeyes=1"
 
 import '../sysext.just'
 
