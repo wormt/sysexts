@@ -25,6 +25,7 @@ path = [
   "nordvpn-gui/usr/lib/systemd/system/nordvpnd.service.d/librarypath.conf",
   "nordvpn/usr/lib/systemd/system/nordvpnd.service.d/librarypath.conf",
   "tailscale/usr/lib/tmpfiles.d/tailscale.conf",
+  "ivpn/usr/lib/tmpfiles.d/ivpn.conf",
 ]
 SPDX-FileCopyrightText = [
     "Fedora sysexts contributors"
