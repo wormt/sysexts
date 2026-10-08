@@ -1,0 +1,6 @@
+name := "fuzzel"
+packages := "fuzzel"
+
+import '../sysext.just'
+
+all: default

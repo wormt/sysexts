@@ -56,6 +56,12 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git fetch --no-tags --prune --depth=1 origin +refs/heads/main:refs/remotes/origin/main
 
+      - name: "Build sysext: fuzzel"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'fuzzel'
+          image: ${{ env.IMAGE }}
+
       - name: "Build sysext: ivpn"
         uses: ./.github/actions/build
         with:
@@ -202,6 +208,12 @@ jobs:
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git fetch --no-tags --prune --depth=1 origin +refs/heads/main:refs/remotes/origin/main
+
+      - name: "Build sysext: fuzzel"
+        uses: ./.github/actions/build
+        with:
+          sysext: 'fuzzel'
+          image: ${{ env.IMAGE }}
 
       - name: "Build sysext: ivpn"
         uses: ./.github/actions/build
