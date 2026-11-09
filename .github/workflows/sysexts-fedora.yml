@@ -15,11 +15,11 @@ on:
     branches:
       - "main"
   schedule:
-    - cron:  '0 0 * * *'
+    - cron: "0 0 * * *"
   workflow_dispatch:
     inputs:
       force-rebuild:
-        description: 'Force rebuild of all sysexts'
+        description: "Force rebuild of all sysexts"
         required: true
         default: false
         type: boolean
@@ -35,13 +35,13 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  build-fedora-44-x86_64:
+  build-fedora-45-x86_64:
     runs-on: "ubuntu-24.04"
     container:
       image: "ghcr.io/fedora-sysexts/buildroot:latest"
       options: "--privileged --security-opt label=disable --user 0:0"
     env:
-      IMAGE: "quay.io/fedora-ostree-desktops/base-atomic:44"
+      IMAGE: "quay.io/fedora-ostree-desktops/base-atomic:45"
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
@@ -59,58 +59,58 @@ jobs:
       - name: "Build sysext: fuzzel"
         uses: ./.github/actions/build
         with:
-          sysext: 'fuzzel'
+          sysext: "fuzzel"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: ivpn"
         uses: ./.github/actions/build
         with:
-          sysext: 'ivpn'
+          sysext: "ivpn"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirt-devel"
         uses: ./.github/actions/build
         with:
-          sysext: 'libvirt-devel'
+          sysext: "libvirt-devel"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: mpd"
         uses: ./.github/actions/build
         with:
-          sysext: 'mpd'
+          sysext: "mpd"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qemu-user-static"
         uses: ./.github/actions/build
         with:
-          sysext: 'qemu-user-static'
+          sysext: "qemu-user-static"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qemu"
         uses: ./.github/actions/build
         with:
-          sysext: 'qemu'
+          sysext: "qemu"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: rclone"
         uses: ./.github/actions/build
         with:
-          sysext: 'rclone'
+          sysext: "rclone"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: rofi"
         uses: ./.github/actions/build
         with:
-          sysext: 'rofi'
+          sysext: "rofi"
           image: ${{ env.IMAGE }}
 
-  build-fedora-silverblue-44-x86_64:
+  build-fedora-silverblue-45-x86_64:
     runs-on: "ubuntu-24.04"
     container:
       image: "ghcr.io/fedora-sysexts/buildroot:latest"
       options: "--privileged --security-opt label=disable --user 0:0"
     env:
-      IMAGE: "quay.io/fedora-ostree-desktops/silverblue:44"
+      IMAGE: "quay.io/fedora-ostree-desktops/silverblue:45"
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
@@ -125,13 +125,13 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git fetch --no-tags --prune --depth=1 origin +refs/heads/main:refs/remotes/origin/main
 
-  build-fedora-kinoite-44-x86_64:
+  build-fedora-kinoite-45-x86_64:
     runs-on: "ubuntu-24.04"
     container:
       image: "ghcr.io/fedora-sysexts/buildroot:latest"
       options: "--privileged --security-opt label=disable --user 0:0"
     env:
-      IMAGE: "quay.io/fedora-ostree-desktops/kinoite:44"
+      IMAGE: "quay.io/fedora-ostree-desktops/kinoite:45"
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
@@ -188,13 +188,13 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git fetch --no-tags --prune --depth=1 origin +refs/heads/main:refs/remotes/origin/main
 
-  build-fedora-44-aarch64:
+  build-fedora-45-aarch64:
     runs-on: "ubuntu-24.04-arm"
     container:
       image: "ghcr.io/fedora-sysexts/buildroot:latest"
       options: "--privileged --security-opt label=disable --user 0:0"
     env:
-      IMAGE: "quay.io/fedora-ostree-desktops/base-atomic:44"
+      IMAGE: "quay.io/fedora-ostree-desktops/base-atomic:45"
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
@@ -212,58 +212,58 @@ jobs:
       - name: "Build sysext: fuzzel"
         uses: ./.github/actions/build
         with:
-          sysext: 'fuzzel'
+          sysext: "fuzzel"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: ivpn"
         uses: ./.github/actions/build
         with:
-          sysext: 'ivpn'
+          sysext: "ivpn"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: libvirt-devel"
         uses: ./.github/actions/build
         with:
-          sysext: 'libvirt-devel'
+          sysext: "libvirt-devel"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: mpd"
         uses: ./.github/actions/build
         with:
-          sysext: 'mpd'
+          sysext: "mpd"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qemu-user-static"
         uses: ./.github/actions/build
         with:
-          sysext: 'qemu-user-static'
+          sysext: "qemu-user-static"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: qemu"
         uses: ./.github/actions/build
         with:
-          sysext: 'qemu'
+          sysext: "qemu"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: rclone"
         uses: ./.github/actions/build
         with:
-          sysext: 'rclone'
+          sysext: "rclone"
           image: ${{ env.IMAGE }}
 
       - name: "Build sysext: rofi"
         uses: ./.github/actions/build
         with:
-          sysext: 'rofi'
+          sysext: "rofi"
           image: ${{ env.IMAGE }}
 
-  build-fedora-silverblue-44-aarch64:
+  build-fedora-silverblue-45-aarch64:
     runs-on: "ubuntu-24.04-arm"
     container:
       image: "ghcr.io/fedora-sysexts/buildroot:latest"
       options: "--privileged --security-opt label=disable --user 0:0"
     env:
-      IMAGE: "quay.io/fedora-ostree-desktops/silverblue:44"
+      IMAGE: "quay.io/fedora-ostree-desktops/silverblue:45"
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
@@ -278,13 +278,13 @@ jobs:
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           git fetch --no-tags --prune --depth=1 origin +refs/heads/main:refs/remotes/origin/main
 
-  build-fedora-kinoite-44-aarch64:
+  build-fedora-kinoite-45-aarch64:
     runs-on: "ubuntu-24.04-arm"
     container:
       image: "ghcr.io/fedora-sysexts/buildroot:latest"
       options: "--privileged --security-opt label=disable --user 0:0"
     env:
-      IMAGE: "quay.io/fedora-ostree-desktops/kinoite:44"
+      IMAGE: "quay.io/fedora-ostree-desktops/kinoite:45"
       FORCE_REBUILD: ${{ inputs.force-rebuild }}
     steps:
       - name: "Checkout repo"
@@ -348,12 +348,12 @@ jobs:
       options: "--privileged --security-opt label=disable --user 0:0"
     # Run after the builds and versionned release
     needs:
-      - build-fedora-44-x86_64
-      - build-fedora-44-aarch64
-      - build-fedora-silverblue-44-x86_64
-      - build-fedora-silverblue-44-aarch64
-      - build-fedora-kinoite-44-x86_64
-      - build-fedora-kinoite-44-aarch64
+      - build-fedora-45-x86_64
+      - build-fedora-45-aarch64
+      - build-fedora-silverblue-45-x86_64
+      - build-fedora-silverblue-45-aarch64
+      - build-fedora-kinoite-45-x86_64
+      - build-fedora-kinoite-45-aarch64
       - build-fedora-coreos-stable-x86_64
       - build-fedora-coreos-stable-aarch64
       - build-fedora-coreos-next-x86_64
